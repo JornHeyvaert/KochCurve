@@ -26,9 +26,9 @@ namespace KochCurve
                 if (depth > -1 && depth < 6) // depth must be between 0 and 5
                 {
                     Pen pen = new Pen(Color.FromArgb(255, 0, 0, 0));
-                    drawSnow(g, pen, depth, 20, 280, 280, 280);
-                    drawSnow(g, pen, depth, 280, 280, 150, 20);
-                    drawSnow(g, pen, depth, 150, 20, 20, 280);
+                    DrawKoch(g, pen, depth, 20, 280, 280, 280);
+                    DrawKoch(g, pen, depth, 280, 280, 150, 20);
+                    DrawKoch(g, pen, depth, 150, 20, 20, 280);
                     isPainted = true;
                     txtDepth.BackColor = SystemColors.Window;
                 }
@@ -50,7 +50,7 @@ namespace KochCurve
                 e.Handled = true;
         }
 
-        private void drawSnow(Graphics g, Pen p, int lev, int x1, int y1, int x5, int y5)
+        private void DrawKoch(Graphics g, Pen p, int lev, int x1, int y1, int x5, int y5)
         {
             int deltaX, deltaY, x2, y2, x3, y3, x4, y4;
 
@@ -72,10 +72,10 @@ namespace KochCurve
                 x4 = x1 + 2 * deltaX / 3;
                 y4 = y1 + 2 * deltaY / 3;
 
-                drawSnow(g, p, lev - 1, x1, y1, x2, y2);
-                drawSnow(g, p, lev - 1, x2, y2, x3, y3);
-                drawSnow(g, p, lev - 1, x3, y3, x4, y4);
-                drawSnow(g, p, lev - 1, x4, y4, x5, y5);
+                DrawKoch(g, p, lev - 1, x1, y1, x2, y2);
+                DrawKoch(g, p, lev - 1, x2, y2, x3, y3);
+                DrawKoch(g, p, lev - 1, x3, y3, x4, y4);
+                DrawKoch(g, p, lev - 1, x4, y4, x5, y5);
             }
         }
     }
