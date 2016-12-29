@@ -6,3 +6,5 @@ Features:
 * Usage of Recursion (DrawKoch method)
 * Usage of Graphics and Pen class to draw Koch Curve
 * Some error handling
+
+More information about Koch Curve: [https://en.wikipedia.org/wiki/Koch_snowflake] (https://en.wikipedia.org/wiki/Koch_snowflake)
