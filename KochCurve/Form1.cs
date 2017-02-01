@@ -43,7 +43,9 @@ namespace KochCurve
             }
         }
 
-        // To allow only numbers in a textbox in a windows application and backspace to remove previously entered text
+        /// <summary>
+        /// To allow only numbers in a textbox in a windows application and backspace to remove previously entered text
+        /// </summary>
         private void txtDepth_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!(Char.IsDigit(e.KeyChar) || (e.KeyChar == (char)Keys.Back)))
